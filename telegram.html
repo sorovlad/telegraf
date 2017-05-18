@@ -36,7 +36,15 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-answercallbackquery" href="#answercallbackquery">answerCallbackQuery</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-answergamequery" href="#answergamequery">answerGameQuery</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-answershippingquery" href="#answershippingquery">answerShippingQuery</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-answerprecheckoutquery" href="#answerprecheckoutquery">answerPreCheckoutQuery</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-answerinlinequery" href="#answerinlinequery">answerInlineQuery</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-deletemessage" href="#deletemessage">deleteMessage</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-editmessagecaption" href="#editmessagecaption">editMessageCaption</a>
                     </li>
@@ -96,7 +104,11 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendvenue" href="#sendvenue">sendVenue</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-sendinvoice" href="#sendinvoice">sendInvoice</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendvideo" href="#sendvideo">sendVideo</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-sendvideonote" href="#sendvideonote">sendVideoNote</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendvoice" href="#sendvoice">sendVoice</a>
                     </li>
@@ -120,7 +132,7 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="telegram">Telegram</h1>
-<p>Telegram API wrapper reference</p>
+<p>Telegram wrapper API reference.</p>
 <pre><code class="lang-js"><span class="pl-k">const</span> { Telegram } = <span class="pl-c1">require</span>(<span class="pl-s">&apos;telegraf&apos;</span>)
 </code></pre>
 <h3 id="constructor">Constructor</h3>
@@ -154,7 +166,7 @@
 }
 </code></pre>
 <h3 id="webhookreply">webhookReply</h3>
-<p>Use this property to control <code>reple via webhook</code> feature.</p>
+<p>Use this property to control <code>reply via webhook</code> feature.</p>
 <p><code>telegram.webhookReply = [bool]</code></p>
 <h3 id="answercallbackquery">answerCallbackQuery</h3>
 <p>Use this method to send answers to callback queries.</p>
@@ -181,7 +193,7 @@
 <tr>
 <td>[url]</td>
 <td><code>string</code></td>
-<td>Notification text</td>
+<td>Game url</td>
 </tr>
 <tr>
 <td>[showAlert]</td>
@@ -196,6 +208,93 @@
 </tbody>
 </table>
 <p><sub><a href="https://core.telegram.org/bots/api#answercallbackquery">See Telegram api docs</a></sub></p>
+<h3 id="answergamequery">answerGameQuery</h3>
+<p>Use this method to send answers to game query.</p>
+<p><code>telegram.answerGameQuery(callbackQueryId, url) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callbackQueryId</td>
+<td><code>string</code></td>
+<td>Query id</td>
+</tr>
+<tr>
+<td>url</td>
+<td><code>string</code></td>
+<td>Notification text</td>
+</tr>
+</tbody>
+</table>
+<h3 id="answershippingquery">answerShippingQuery</h3>
+<p>Use this method to send answers to shipping query.</p>
+<p><code>telegram.answerShippingQuery(shippingQueryId, ok, shippingOptions, errorMessage) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shippingQueryId</td>
+<td><code>string</code></td>
+<td>Shipping Query id</td>
+</tr>
+<tr>
+<td>ok</td>
+<td><code>bool</code></td>
+<td>Specify True if delivery to the specified address is possible</td>
+</tr>
+<tr>
+<td>shippingOptions</td>
+<td><code>bool</code></td>
+<td><a href="https://core.telegram.org/bots/api#answershippingquery">Shipping Options</a></td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td><code>bool</code></td>
+<td>Error message in human readable form</td>
+</tr>
+</tbody>
+</table>
+<h3 id="answerprecheckoutquery">answerPreCheckoutQuery</h3>
+<p>Use this method to send answers to shipping query.</p>
+<p><code>telegram.answerPreCheckoutQuery(preCheckoutQueryId, ok, errorMessage) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>preCheckoutQueryId</td>
+<td><code>string</code></td>
+<td>Shipping Query id</td>
+</tr>
+<tr>
+<td>ok</td>
+<td><code>bool</code></td>
+<td>Specify True if everything is alright (goods are available, etc.)</td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td><code>bool</code></td>
+<td>Error message in human readable form</td>
+</tr>
+</tbody>
+</table>
 <h3 id="answerinlinequery">answerInlineQuery</h3>
 <p>Use this method to send answers to an inline query.</p>
 <p><code>telegram.answerInlineQuery(inlineQueryId, results, extra) =&gt; Promise</code></p>
@@ -222,6 +321,30 @@
 <td>[extra]</td>
 <td><code>object</code></td>
 <td><a href="https://core.telegram.org/bots/api#answerinlinequery">Extra parameters</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deletemessage">deleteMessage</h3>
+<p>Use this method to delete bot messages</p>
+<p><code>telegram.deleteMessage(chatId, messageId) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>messageId</td>
+<td><code>string</code></td>
+<td>Message id</td>
 </tr>
 </tbody>
 </table>
@@ -608,8 +731,8 @@ ns, current username of a user, group or channel, etc.).</p>
 <tbody>
 <tr>
 <td>fileId</td>
-<td><code>string</code></td>
-<td>File id</td>
+<td><code>string</code>|<code>object</code></td>
+<td>File id or file object</td>
 </tr>
 </tbody>
 </table>
@@ -1006,6 +1129,30 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
+<h3 id="sendinvoice">sendInvoice</h3>
+<p>Sends invoice.</p>
+<p><code>telegram.sendInvoice(chatId, invoice) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>invoice</td>
+<td><code>File</code></td>
+<td><a href="https://core.telegram.org/bots/api#sendinvoice">Invoice object</a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="sendvideo">sendVideo</h3>
 <p>Sends video.</p>
 <p><code>telegram.sendVideo(chatId, video, extra) =&gt; Promise</code></p>
@@ -1032,6 +1179,35 @@ ns, current username of a user, group or channel, etc.).</p>
 <td>[extra]</td>
 <td><code>object</code></td>
 <td><a href="https://core.telegram.org/bots/api#sendvideo">Extra parameters</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sendvideonote">sendVideoNote</h3>
+<p>Sends round video.</p>
+<p><code>telegram.sendVideoNote(chatId, video, extra) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>video</td>
+<td><code>File</code></td>
+<td>Video note file</td>
+</tr>
+<tr>
+<td>[extra]</td>
+<td><code>object</code></td>
+<td><a href="https://core.telegram.org/bots/api#sendvideonote">Extra parameters</a></td>
 </tr>
 </tbody>
 </table>

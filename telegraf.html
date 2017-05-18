@@ -30,6 +30,10 @@
                   <ul class="headings heading-list">
                     <li class="heading-item -depth-3"><a class="hlink link-constructor" href="#constructor">Constructor</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-token" href="#token">token</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-webhookreply" href="#webhookreply">webhookReply</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-use" href="#use">use</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-on" href="#on">on</a>
@@ -61,6 +65,8 @@
                     <li class="heading-item -depth-3"><a class="hlink link-telegraf.action" href="#telegraf.action">Telegraf.action</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-telegraf.passthru" href="#telegraf.passthru">Telegraf.passThru</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-telegraf.safepassthru" href="#telegraf.safepassthru">Telegraf.safePassThru</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-telegraf.optional" href="#telegraf.optional">Telegraf.optional</a>
                     </li>
@@ -122,6 +128,12 @@
   <span class="hljs-attr">username</span>: <span class="pl-s">&apos;&apos;</span>          <span class="pl-c">// Bot username (optional)  </span>
 }
 </code></pre>
+<h3 id="token">token</h3>
+<p>Use this property to get/set bot token.</p>
+<p><code>telegraf.token = [string]</code></p>
+<h3 id="webhookreply">webhookReply</h3>
+<p>Use this property to control <code>reply via webhook</code> feature.</p>
+<p><code>telegraf.webhookReply = [bool]</code></p>
 <h3 id="use">use</h3>
 <p>Registers a middleware.</p>
 <p><code>telegraf.use(middleware)</code></p>
@@ -465,6 +477,9 @@ In case you use centralized webhook server, queue, etc.</p>
 <h3 id="telegraf.passthru">Telegraf.passThru</h3>
 <p>Generates pass thru middleware.</p>
 <p><code>Telegraf.passThru() =&gt; function</code></p>
+<h3 id="telegraf.safepassthru">Telegraf.safePassThru</h3>
+<p>Generates safe version of pass thru middleware.</p>
+<p><code>Telegraf.safePassThru() =&gt; function</code></p>
 <h3 id="telegraf.optional">Telegraf.optional</h3>
 <p>Generates optional middleware.</p>
 <p><code>Telegraf.optional(test, middleware) =&gt; function</code></p>

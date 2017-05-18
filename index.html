@@ -22,7 +22,7 @@
                 </li>
                 <li class="heading-item -depth-2"><a class="hlink link-telegram-token" href="#telegram-token">Telegram token</a>
                 </li>
-                <li class="heading-item -depth-2"><a class="hlink link-example" href="#example">Example</a>
+                <li class="heading-item -depth-2"><a class="hlink link-examples" href="#examples">Examples</a>
                 </li>
               </ul>
               <ul class="submenu">
@@ -59,32 +59,48 @@ Users can interact with bots by sending them command messages in private or grou
 These accounts serve as an interface for code running somewhere on your server.</p>
 <h2 id="features">Features</h2>
 <ul>
-<li>Full <a href="https://core.telegram.org/bots/api">Telegram Bot API</a> support</li>
+<li>Full <a href="https://core.telegram.org/bots/api">Telegram Bot API 3.0</a> support</li>
+<li><a href="https://telegram.org/blog/payments">Telegram Payment Platform</a></li>
+<li><a href="https://core.telegram.org/bots/api#games">HTML5 Games</a></li>
 <li><a href="https://core.telegram.org/bots/api#inline-mode">Inline mode</a></li>
-<li><a href="https://core.telegram.org/bots/api#games">Games</a></li>
-<li>AWS <strong>&#x3BB;</strong>/now/dokku/Heroku ready</li>
-<li>http/https/Connect/express.js webhooks</li>
 <li>Incredibly fast</li>
+<li>AWS <strong>&#x3BB;</strong>/<a href="https://github.com/telegraf/micro-bot#deployment-to-now">now</a>/dokku/<a href="https://github.com/telegraf/micro-bot#deployment-to-heroku">Heroku</a> ready</li>
+<li><code>http</code>/<code>https</code>/<code>Connect.js</code>/<code>express.js</code> compatible webhooks</li>
 <li>Easy to extend</li>
 </ul>
 <h2 id="installation">Installation</h2>
-<pre><code class="lang-js">$ npm install telegraf --save
+<pre><code>$ npm install telegraf --save
+</code></pre>
+<p>Using <code>yarn</code></p>
+<pre><code>$ yarn add telegraf
 </code></pre>
 <h2 id="telegram-token">Telegram token</h2>
 <p>To use the <a href="https://core.telegram.org/bots/api">Telegram Bot API</a>,
 you first have to <a href="https://core.telegram.org/bots">get a bot account</a>
 by <a href="https://core.telegram.org/bots#6-botfather">chatting with BotFather</a>.</p>
-<p>BotFather will give you a <strong>token</strong>, something like <code>123456789:AbCdfGhIJKlmNoQQRsTUVwxyZ</code>.
-With the token in hand, you can start developing your bot.</p>
-<h2 id="example">Example</h2>
+<p>BotFather will give you a <em>token</em>, something like <code>123456789:AbCdfGhIJKlmNoQQRsTUVwxyZ</code>.</p>
+<h2 id="examples">Examples</h2>
 <pre><code class="lang-js"><span class="pl-k">const</span> Telegraf = <span class="pl-c1">require</span>(<span class="pl-s">&apos;telegraf&apos;</span>)
 
 <span class="pl-k">const</span> app = <span class="pl-k">new</span> Telegraf(process.env.BOT_TOKEN)
-app.command(<span class="pl-s">&apos;start&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Hey&apos;</span>))
+app.command(<span class="pl-s">&apos;start&apos;</span>, ({ <span class="pl-k">from</span>, reply }) =&gt; {
+  <span class="pl-c1">console</span>.log(<span class="pl-s">&apos;start&apos;</span>, <span class="pl-k">from</span>)
+  <span class="pl-k">return</span> reply(<span class="pl-s">&apos;Welcome!&apos;</span>)
+})
+app.hears(<span class="pl-s">&apos;hi&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Hey there!&apos;</span>))
 app.on(<span class="pl-s">&apos;sticker&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;&#x1F44D;&apos;</span>))
 app.startPolling()
 </code></pre>
-<p>There&apos;s some cool <a href="https://github.com/telegraf/telegraf/tree/master/examples">examples</a></p>
+<pre><code class="lang-js"><span class="pl-k">const</span> Telegraf = <span class="pl-c1">require</span>(<span class="pl-s">&apos;telegraf&apos;</span>)
+<span class="pl-k">const</span> { reply } = Telegraf
+
+<span class="pl-k">const</span> bot = <span class="pl-k">new</span> Telegraf(process.env.BOT_TOKEN)
+bot.command(<span class="pl-s">&apos;/oldschool&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Hello&apos;</span>))
+bot.command(<span class="pl-s">&apos;/modern&apos;</span>, ({ reply }) =&gt; reply(<span class="pl-s">&apos;Yo&apos;</span>))
+bot.command(<span class="pl-s">&apos;/hipster&apos;</span>, reply(<span class="pl-s">&apos;&#x3BB;&apos;</span>))
+bot.startPolling()
+</code></pre>
+<p>There&apos;s some cool <a href="https://github.com/telegraf/telegraf/tree/master/examples">examples</a>.</p>
 
         </div>
         <div class="footer-nav">

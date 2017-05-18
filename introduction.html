@@ -85,7 +85,8 @@ app.use(<span class="hljs-function">(<span class="hljs-params">ctx, next</span>)
 
 app.on(<span class="pl-s">&apos;text&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Hello World&apos;</span>))
 </code></pre>
-<h4 id="cascading-with-async-functions-(babel-required)">Cascading with async functions (Babel required)</h4>
+<h4 id="cascading-with-async-functions">Cascading with async functions</h4>
+<p>You might need Babel(or <code>node &gt;=v.7.x</code> with harmony flags) for running following example.</p>
 <pre><code class="lang-js">app.use(<span class="pl-k">async</span> (ctx, next) =&gt; {
   <span class="pl-k">const</span> start = <span class="pl-k">new</span> <span class="pl-c1">Date</span>()
   <span class="pl-k">await</span> next()
@@ -156,15 +157,18 @@ app.on(<span class="pl-s">&apos;text&apos;</span>, (ctx) =&gt; {
 <li><code>edited_message</code></li>
 <li><code>callback_query</code></li>
 <li><code>inline_query</code></li>
+<li><code>shipping_query</code></li>
+<li><code>pre_checkout_query</code></li>
 <li><code>chosen_inline_result</code></li>
 <li><code>channel_post</code></li>
 <li><code>edited_channel_post</code></li>
 </ul>
 <p>Available update sub-types:
-<code>text</code>, <code>audio</code>, <code>document</code>, <code>photo</code>, <code>sticker</code>, <code>video</code>, <code>voice</code>, <code>contact</code>, <code>location</code>,
-<code>venue</code>, <code>new_chat_member</code>, <code>left_chat_member</code>, <code>new_chat_title</code>, <code>new_chat_photo</code>,
-<code>delete_chat_photo</code>, <code>group_chat_created</code>, <code>supergroup_chat_created</code>, <code>channel_chat_created</code>,
-<code>migrate_to_chat_id</code>, <code>migrate_from_chat_id</code>, <code>pinned_message</code>, <code>game</code>.</p>
+<code>text</code>, <code>audio</code>, <code>document</code>, <code>photo</code>, <code>sticker</code>, <code>video</code>, <code>voice</code>, <code>contact</code>,
+<code>location</code>, <code>venue</code>, <code>new_chat_members</code>, <code>left_chat_member</code>, <code>new_chat_title</code>,
+<code>new_chat_photo</code>, <code>delete_chat_photo</code>, <code>group_chat_created</code>, <code>migrate_to_chat_id</code>,
+<code>supergroup_chat_created</code>, <code>channel_chat_created</code>, <code>migrate_from_chat_id</code>,
+<code>pinned_message</code>, <code>game</code>, <code>video_note</code>, <code>invoice</code>, <code>successful_payment</code>.</p>
 <pre><code class="lang-js">
 <span class="pl-c">// Handle message update</span>
 telegraf.on(<span class="pl-s">&apos;message&apos;</span>, (ctx) =&gt;  {

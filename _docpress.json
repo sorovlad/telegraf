@@ -23,9 +23,9 @@
             "id": "telegram-token"
           },
           {
-            "title": "Example",
+            "title": "Examples",
             "depth": 2,
-            "id": "example"
+            "id": "examples"
           }
         ],
         "sections": [
@@ -135,6 +135,16 @@
                 "id": "constructor"
               },
               {
+                "title": "token",
+                "depth": 3,
+                "id": "token"
+              },
+              {
+                "title": "webhookReply",
+                "depth": 3,
+                "id": "webhookreply"
+              },
+              {
                 "title": "use",
                 "depth": 3,
                 "id": "use"
@@ -215,6 +225,11 @@
                 "id": "telegraf.passthru"
               },
               {
+                "title": "Telegraf.safePassThru",
+                "depth": 3,
+                "id": "telegraf.safepassthru"
+              },
+              {
                 "title": "Telegraf.optional",
                 "depth": 3,
                 "id": "telegraf.optional"
@@ -253,9 +268,29 @@
                 "id": "answercallbackquery"
               },
               {
+                "title": "answerGameQuery",
+                "depth": 3,
+                "id": "answergamequery"
+              },
+              {
+                "title": "answerShippingQuery",
+                "depth": 3,
+                "id": "answershippingquery"
+              },
+              {
+                "title": "answerPreCheckoutQuery",
+                "depth": 3,
+                "id": "answerprecheckoutquery"
+              },
+              {
                 "title": "answerInlineQuery",
                 "depth": 3,
                 "id": "answerinlinequery"
+              },
+              {
+                "title": "deleteMessage",
+                "depth": 3,
+                "id": "deletemessage"
               },
               {
                 "title": "editMessageCaption",
@@ -403,9 +438,19 @@
                 "id": "sendvenue"
               },
               {
+                "title": "sendInvoice",
+                "depth": 3,
+                "id": "sendinvoice"
+              },
+              {
                 "title": "sendVideo",
                 "depth": 3,
                 "id": "sendvideo"
+              },
+              {
+                "title": "sendVideoNote",
+                "depth": 3,
+                "id": "sendvideonote"
               },
               {
                 "title": "sendVoice",
@@ -469,9 +514,9 @@
           "id": "telegram-token"
         },
         {
-          "title": "Example",
+          "title": "Examples",
           "depth": 2,
-          "id": "example"
+          "id": "examples"
         }
       ]
     },
@@ -576,6 +621,16 @@
           "id": "constructor"
         },
         {
+          "title": "token",
+          "depth": 3,
+          "id": "token"
+        },
+        {
+          "title": "webhookReply",
+          "depth": 3,
+          "id": "webhookreply"
+        },
+        {
           "title": "use",
           "depth": 3,
           "id": "use"
@@ -656,6 +711,11 @@
           "id": "telegraf.passthru"
         },
         {
+          "title": "Telegraf.safePassThru",
+          "depth": 3,
+          "id": "telegraf.safepassthru"
+        },
+        {
           "title": "Telegraf.optional",
           "depth": 3,
           "id": "telegraf.optional"
@@ -694,9 +754,29 @@
           "id": "answercallbackquery"
         },
         {
+          "title": "answerGameQuery",
+          "depth": 3,
+          "id": "answergamequery"
+        },
+        {
+          "title": "answerShippingQuery",
+          "depth": 3,
+          "id": "answershippingquery"
+        },
+        {
+          "title": "answerPreCheckoutQuery",
+          "depth": 3,
+          "id": "answerprecheckoutquery"
+        },
+        {
           "title": "answerInlineQuery",
           "depth": 3,
           "id": "answerinlinequery"
+        },
+        {
+          "title": "deleteMessage",
+          "depth": 3,
+          "id": "deletemessage"
         },
         {
           "title": "editMessageCaption",
@@ -844,9 +924,19 @@
           "id": "sendvenue"
         },
         {
+          "title": "sendInvoice",
+          "depth": 3,
+          "id": "sendinvoice"
+        },
+        {
           "title": "sendVideo",
           "depth": 3,
           "id": "sendvideo"
+        },
+        {
+          "title": "sendVideoNote",
+          "depth": 3,
+          "id": "sendvideonote"
         },
         {
           "title": "sendVoice",
