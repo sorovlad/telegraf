@@ -235,6 +235,11 @@
                 "id": "telegraf.optional"
               },
               {
+                "title": "Telegraf.filter",
+                "depth": 3,
+                "id": "telegraf.filter"
+              },
+              {
                 "title": "Telegraf.branch",
                 "depth": 3,
                 "id": "telegraf.branch"
@@ -376,6 +381,51 @@
                 "title": "kickChatMember",
                 "depth": 3,
                 "id": "kickchatmember"
+              },
+              {
+                "title": "restrictChatMember",
+                "depth": 3,
+                "id": "restrictchatmember"
+              },
+              {
+                "title": "promoteChatMember",
+                "depth": 3,
+                "id": "promotechatmember"
+              },
+              {
+                "title": "exportChatInviteLink",
+                "depth": 3,
+                "id": "exportchatinvitelink"
+              },
+              {
+                "title": "setChatPhoto",
+                "depth": 3,
+                "id": "setchatphoto"
+              },
+              {
+                "title": "deleteChatPhoto",
+                "depth": 3,
+                "id": "deletechatphoto"
+              },
+              {
+                "title": "setChatTitle",
+                "depth": 3,
+                "id": "setchattitle"
+              },
+              {
+                "title": "setChatDescription",
+                "depth": 3,
+                "id": "setchatdescription"
+              },
+              {
+                "title": "pinChatMessage",
+                "depth": 3,
+                "id": "pinchatmessage"
+              },
+              {
+                "title": "unpinChatMessage",
+                "depth": 3,
+                "id": "unpinchatmessage"
               },
               {
                 "title": "leaveChat",
@@ -721,6 +771,11 @@
           "id": "telegraf.optional"
         },
         {
+          "title": "Telegraf.filter",
+          "depth": 3,
+          "id": "telegraf.filter"
+        },
+        {
           "title": "Telegraf.branch",
           "depth": 3,
           "id": "telegraf.branch"
@@ -862,6 +917,51 @@
           "title": "kickChatMember",
           "depth": 3,
           "id": "kickchatmember"
+        },
+        {
+          "title": "restrictChatMember",
+          "depth": 3,
+          "id": "restrictchatmember"
+        },
+        {
+          "title": "promoteChatMember",
+          "depth": 3,
+          "id": "promotechatmember"
+        },
+        {
+          "title": "exportChatInviteLink",
+          "depth": 3,
+          "id": "exportchatinvitelink"
+        },
+        {
+          "title": "setChatPhoto",
+          "depth": 3,
+          "id": "setchatphoto"
+        },
+        {
+          "title": "deleteChatPhoto",
+          "depth": 3,
+          "id": "deletechatphoto"
+        },
+        {
+          "title": "setChatTitle",
+          "depth": 3,
+          "id": "setchattitle"
+        },
+        {
+          "title": "setChatDescription",
+          "depth": 3,
+          "id": "setchatdescription"
+        },
+        {
+          "title": "pinChatMessage",
+          "depth": 3,
+          "id": "pinchatmessage"
+        },
+        {
+          "title": "unpinChatMessage",
+          "depth": 3,
+          "id": "unpinchatmessage"
         },
         {
           "title": "leaveChat",

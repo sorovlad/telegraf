@@ -70,6 +70,8 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-telegraf.optional" href="#telegraf.optional">Telegraf.optional</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-telegraf.filter" href="#telegraf.filter">Telegraf.filter</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-telegraf.branch" href="#telegraf.branch">Telegraf.branch</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-working-with-files" href="#working-with-files">Working with files</a>
@@ -501,6 +503,25 @@ In case you use centralized webhook server, queue, etc.</p>
 <td>middleware</td>
 <td><code>function</code></td>
 <td>middleware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="telegraf.filter">Telegraf.filter</h3>
+<p>Generates filter middleware.</p>
+<p><code>Telegraf.filter(test) =&gt; function</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>test</td>
+<td><code>truthy</code>|<code>function</code></td>
+<td>Value or predicate <code>(ctx) =&gt; bool</code></td>
 </tr>
 </tbody>
 </table>

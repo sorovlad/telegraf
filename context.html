@@ -55,7 +55,7 @@ Context is created per request and contains following props:</p>
 <pre><code class="lang-js">app.use(<span class="hljs-function">(<span class="hljs-params">ctx</span>) =&gt;</span> {
   ctx.telegram             <span class="pl-c">// Telegram instance</span>
   ctx.updateType           <span class="pl-c">// Update type (message, inline_query, etc.)</span>
-  [ctx.updateSubType]      <span class="pl-c">// Update subtype (text, sticker, audio, etc.)</span>
+  [ctx.updateSubTypes]      <span class="pl-c">// Update subtypes (text, sticker, audio, etc.)</span>
   [ctx.me]                 <span class="pl-c">// Bot username</span>
   [ctx.message]            <span class="pl-c">// Received message</span>
   [ctx.editedMessage]      <span class="pl-c">// Edited message</span>
@@ -86,38 +86,14 @@ app.on(<span class="pl-s">&apos;text&apos;</span>, (ctx) =&gt; {
 </code></pre>
 <h2 id="shortcuts">Shortcuts</h2>
 <p>Context shortcuts for <strong>message</strong> update:</p>
-<pre><code class="lang-js">ctx.getChat() -&gt; ctx.telegram.getChat()
-ctx.getChatAdministrators() -&gt; ctx.telegram.getChatAdministrators()
-ctx.getChatMember() -&gt; ctx.telegram.getChatMember()
-ctx.getChatMembersCount() -&gt; ctx.telegram.getChatMembersCount()
-ctx.leaveChat() -&gt; ctx.telegram.leaveChat()
-ctx.reply() -&gt; ctx.telegram.sendMessage()
-ctx.replyWithAudio() -&gt; ctx.telegram.sendAudio()
-ctx.replyWithChatAction() -&gt; ctx.telegram.sendChatAction()
-ctx.replyWithDocument() -&gt; ctx.telegram.sendDocument()
-ctx.replyWithGame() -&gt; ctx.telegram.sendGame()
-ctx.replyWithHTML() -&gt; ctx.telegram.sendMessage()
-ctx.replyWithInvoice() -&gt; ctx.telegram.sendInvoice()
-ctx.replyWithLocation() -&gt; ctx.telegram.sendLocation()
-ctx.replyWithMarkdown() -&gt; ctx.telegram.sendMessage()
-ctx.replyWithPhoto() -&gt; ctx.telegram.sendPhoto()
-ctx.replyWithSticker() -&gt; ctx.telegram.sendSticker()
-ctx.replyWithVideo() -&gt; ctx.telegram.sendVideo()
-ctx.replyWithVideoNote() -&gt; ctx.telegram.sendVideoNote()
-ctx.replyWithVoice() -&gt; ctx.telegram.sendVoice()
-</code></pre>
-<p>Context shortcuts for <strong>callback_query</strong> update:</p>
-<pre><code class="lang-js">ctx.answerCallbackQuery() -&gt; ctx.telegram.answerCallbackQuery()
-ctx.answerGameQuery() -&gt; ctx.telegram.answerGameQuery()
-ctx.deleteMessage() -&gt; ctx.telegram.deleteMessage()
-ctx.editMessageCaption() -&gt; ctx.telegram.editMessageCaption()
-ctx.editMessageReplyMarkup() -&gt; ctx.telegram.editMessageReplyMarkup()
-ctx.editMessageText() -&gt; ctx.telegram.editMessageText()
+<pre><code class="lang-js">ctx.deleteChatPhoto() -&gt; ctx.telegram.deleteChatPhoto()
+ctx.exportChatInviteLink() -&gt; ctx.telegram.exportChatInviteLink()
 ctx.getChat() -&gt; ctx.telegram.getChat()
 ctx.getChatAdministrators() -&gt; ctx.telegram.getChatAdministrators()
 ctx.getChatMember() -&gt; ctx.telegram.getChatMember()
 ctx.getChatMembersCount() -&gt; ctx.telegram.getChatMembersCount()
 ctx.leaveChat() -&gt; ctx.telegram.leaveChat()
+ctx.pinChatMessage() -&gt; ctx.telegram.pinChatMessage()
 ctx.reply() -&gt; ctx.telegram.sendMessage()
 ctx.replyWithAudio() -&gt; ctx.telegram.sendAudio()
 ctx.replyWithChatAction() -&gt; ctx.telegram.sendChatAction()
@@ -132,6 +108,44 @@ ctx.replyWithSticker() -&gt; ctx.telegram.sendSticker()
 ctx.replyWithVideo() -&gt; ctx.telegram.sendVideo()
 ctx.replyWithVideoNote() -&gt; ctx.telegram.sendVideoNote()
 ctx.replyWithVoice() -&gt; ctx.telegram.sendVoice()
+ctx.setChatDescription() -&gt; ctx.telegram.setChatDescription()
+ctx.setChatPhoto() -&gt; ctx.telegram.setChatPhoto()
+ctx.setChatTitle() -&gt; ctx.telegram.setChatTitle()
+ctx.unpinChatMessage() -&gt; ctx.telegram.unpinChatMessage()
+</code></pre>
+<p>Context shortcuts for <strong>callback_query</strong> update:</p>
+<pre><code class="lang-js">ctx.answerCallbackQuery() -&gt; ctx.telegram.answerCallbackQuery()
+ctx.answerGameQuery() -&gt; ctx.telegram.answerGameQuery()
+ctx.deleteChatPhoto() -&gt; ctx.telegram.deleteChatPhoto()
+ctx.deleteMessage() -&gt; ctx.telegram.deleteMessage()
+ctx.editMessageCaption() -&gt; ctx.telegram.editMessageCaption()
+ctx.editMessageReplyMarkup() -&gt; ctx.telegram.editMessageReplyMarkup()
+ctx.editMessageText() -&gt; ctx.telegram.editMessageText()
+ctx.exportChatInviteLink() -&gt; ctx.telegram.exportChatInviteLink()
+ctx.getChat() -&gt; ctx.telegram.getChat()
+ctx.getChatAdministrators() -&gt; ctx.telegram.getChatAdministrators()
+ctx.getChatMember() -&gt; ctx.telegram.getChatMember()
+ctx.getChatMembersCount() -&gt; ctx.telegram.getChatMembersCount()
+ctx.leaveChat() -&gt; ctx.telegram.leaveChat()
+ctx.pinChatMessage() -&gt; ctx.telegram.pinChatMessage()
+ctx.reply() -&gt; ctx.telegram.sendMessage()
+ctx.replyWithAudio() -&gt; ctx.telegram.sendAudio()
+ctx.replyWithChatAction() -&gt; ctx.telegram.sendChatAction()
+ctx.replyWithDocument() -&gt; ctx.telegram.sendDocument()
+ctx.replyWithGame() -&gt; ctx.telegram.sendGame()
+ctx.replyWithHTML() -&gt; ctx.telegram.sendMessage()
+ctx.replyWithInvoice() -&gt; ctx.telegram.sendInvoice()
+ctx.replyWithLocation() -&gt; ctx.telegram.sendLocation()
+ctx.replyWithMarkdown() -&gt; ctx.telegram.sendMessage()
+ctx.replyWithPhoto() -&gt; ctx.telegram.sendPhoto()
+ctx.replyWithSticker() -&gt; ctx.telegram.sendSticker()
+ctx.replyWithVideo() -&gt; ctx.telegram.sendVideo()
+ctx.replyWithVideoNote() -&gt; ctx.telegram.sendVideoNote()
+ctx.replyWithVoice() -&gt; ctx.telegram.sendVoice()
+ctx.setChatDescription() -&gt; ctx.telegram.setChatDescription()
+ctx.setChatPhoto() -&gt; ctx.telegram.setChatPhoto()
+ctx.setChatTitle() -&gt; ctx.telegram.setChatTitle()
+ctx.unpinChatMessage() -&gt; ctx.telegram.unpinChatMessage()
 </code></pre>
 <p>Context shortcuts for <strong>inline_query</strong> update:</p>
 <pre><code class="lang-js">ctx.answerInlineQuery() -&gt; ctx.telegram.answerInlineQuery()
@@ -146,34 +160,34 @@ ctx.replyWithVoice() -&gt; ctx.telegram.sendVoice()
 <pre><code class="lang-js"><span class="pl-k">const</span> bot = <span class="pl-k">new</span> Telegraf(process.env.BOT_TOKEN)
 
 bot.on(<span class="pl-s">&apos;text&apos;</span>, (ctx) =&gt; {
-  <span class="pl-c">// Simple usage </span>
+  <span class="pl-c">// Simple usage</span>
   ctx.telegram.sendMessage(ctx.message.chat.id, <span class="pl-s">`Hello <span class="hljs-subst">${ctx.state.role}</span>`</span>)
-  
+
   <span class="pl-c">// Using shortcut</span>
   ctx.reply(<span class="pl-s">`Hello <span class="hljs-subst">${ctx.state.role}</span>`</span>)
 })
 
 bot.on(<span class="pl-s">&apos;/quit&apos;</span>, (ctx) =&gt; {
-  <span class="pl-c">// Simple usage </span>
+  <span class="pl-c">// Simple usage</span>
   ctx.telegram.leaveChat(ctx.message.chat.id)
-  
+
   <span class="pl-c">// Using shortcut</span>
   ctx.leaveChat()
 })
 
 bot.on(<span class="pl-s">&apos;callback_query&apos;</span>, (ctx) =&gt; {
-  <span class="pl-c">// Simple usage </span>
+  <span class="pl-c">// Simple usage</span>
   ctx.telegram.answerCallbackQuery(ctx.callbackQuery.id)
-  
+
   <span class="pl-c">// Using shortcut</span>
   ctx.answerCallbackQuery()
 })
 
 bot.on(<span class="pl-s">&apos;inline_query&apos;</span>, (ctx) =&gt; {
   <span class="pl-k">const</span> result = []
-  <span class="pl-c">// Simple usage </span>
+  <span class="pl-c">// Simple usage</span>
   ctx.telegram.answerInlineQuery(ctx.inlineQuery.id, result)
-  
+
   <span class="pl-c">// Using shortcut</span>
   ctx.answerInlineQuery(result)
 })

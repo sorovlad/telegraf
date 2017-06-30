@@ -80,6 +80,24 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-kickchatmember" href="#kickchatmember">kickChatMember</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-restrictchatmember" href="#restrictchatmember">restrictChatMember</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-promotechatmember" href="#promotechatmember">promoteChatMember</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-exportchatinvitelink" href="#exportchatinvitelink">exportChatInviteLink</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-setchatphoto" href="#setchatphoto">setChatPhoto</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-deletechatphoto" href="#deletechatphoto">deleteChatPhoto</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-setchattitle" href="#setchattitle">setChatTitle</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-setchatdescription" href="#setchatdescription">setChatDescription</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-pinchatmessage" href="#pinchatmessage">pinChatMessage</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-unpinchatmessage" href="#unpinchatmessage">unpinChatMessage</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-leavechat" href="#leavechat">leaveChat</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-deletewebhook" href="#deletewebhook">deleteWebhook</a>
@@ -207,7 +225,7 @@
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#answercallbackquery">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#answercallbackquery">Telegram api docs</a></sub></p>
 <h3 id="answergamequery">answerGameQuery</h3>
 <p>Use this method to send answers to game query.</p>
 <p><code>telegram.answerGameQuery(callbackQueryId, url) =&gt; Promise</code></p>
@@ -551,7 +569,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getchat">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getchat">Telegram api docs</a></sub></p>
 <h3 id="getchatadministrators">getChatAdministrators</h3>
 <p>Use this method to get a list of administrators in a chat. On success, returns an Array of ChatMember objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned.</p>
 <p><code>telegram.getChatAdministrators(chatId) =&gt; Promise</code></p>
@@ -571,7 +589,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getchatadministrators">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getchatadministrators">Telegram api docs</a></sub></p>
 <h3 id="setgamescore">setGameScore</h3>
 <p>Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns True. Returns an error, if the new score is not greater than the user&apos;s current score in the chat.</p>
 <p><code>telegram.setGameScore(userId, score, inlineMessageId, chatId, messageId, editMessage, force) =&gt; Promise</code></p>
@@ -621,7 +639,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#setgamescore">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#setgamescore">Telegram api docs</a></sub></p>
 <h3 id="getgamehighscores">getGameHighScores</h3>
 <p>Use this method to get data for high score tables. Will return the score of the specified user and several of his neighbors in a game. On success, returns an Array of GameHighScore objects.</p>
 <p><code>telegram.getGameHighScores(userId, inlineMessageId, chatId, messageId) =&gt; Promise</code></p>
@@ -656,7 +674,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getgamehighscores">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getgamehighscores">Telegram api docs</a></sub></p>
 <h3 id="getchatmember">getChatMember</h3>
 <p>Use this method to get information about a member of a chat.</p>
 <p><code>telegram.getChatMember(chatId) =&gt; Promise</code></p>
@@ -676,7 +694,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getchatmember">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getchatmember">Telegram api docs</a></sub></p>
 <h3 id="getchatmemberscount">getChatMembersCount</h3>
 <p>Use this method to get the number of members in a chat.</p>
 <p><code>telegram.getChatMembersCount(chatId) =&gt; Promise</code></p>
@@ -696,7 +714,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getchatmemberscount">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getchatmemberscount">Telegram api docs</a></sub></p>
 <h3 id="getfile">getFile</h3>
 <p>Returns basic info about a file and prepare it for downloading.</p>
 <p><code>telegram.getFile(fileId) =&gt; Promise</code></p>
@@ -716,7 +734,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getfile">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getfile">Telegram api docs</a></sub></p>
 <h3 id="getfilelink">getFileLink</h3>
 <p>Returns link to file.</p>
 <p><code>telegram.getFileLink(fileId) =&gt; Promise</code></p>
@@ -739,7 +757,7 @@ ns, current username of a user, group or channel, etc.).</p>
 <h3 id="getme">getMe</h3>
 <p>Returns basic information about the bot.</p>
 <p><code>telegram.getMe() =&gt; Promise</code></p>
-<p><sub><a href="https://core.telegram.org/bots/api#getme">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getme">Telegram api docs</a></sub></p>
 <h3 id="getuserprofilephotos">getUserProfilePhotos</h3>
 <p>Returns profiles photos for provided user.</p>
 <p><code>telegram.getUserProfilePhotos(userId, offset, limit) =&gt; Promise</code></p>
@@ -769,10 +787,10 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#getuserprofilephotos">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#getuserprofilephotos">Telegram api docs</a></sub></p>
 <h3 id="kickchatmember">kickChatMember</h3>
 <p>Use this method to kick a user from a group or a supergroup.</p>
-<p><code>telegram.kickChatMember(chatId, userId) =&gt; Promise</code></p>
+<p><code>telegram.kickChatMember(chatId, userId, extra) =&gt; Promise</code></p>
 <table>
 <thead>
 <tr>
@@ -792,9 +810,239 @@ ns, current username of a user, group or channel, etc.).</p>
 <td><code>number</code></td>
 <td>User id</td>
 </tr>
+<tr>
+<td>[extra]</td>
+<td><code>object</code></td>
+<td><a href="https://core.telegram.org/bots/api#kickchatmember">Extra parameters</a></td>
+</tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#kickchatmember">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#kickchatmember">Telegram api docs</a></sub></p>
+<h3 id="restrictchatmember">restrictChatMember</h3>
+<p>Use this method to restrict a user in a supergroup.</p>
+<p><code>telegram.restrictChatMember(chatId, userId, extra) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>userId</td>
+<td><code>number</code></td>
+<td>User id</td>
+</tr>
+<tr>
+<td>[extra]</td>
+<td><code>object</code></td>
+<td><a href="https://core.telegram.org/bots/api#restrictchatmember">Extra parameters</a></td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#restrictchatmember">Telegram api docs</a></sub></p>
+<h3 id="promotechatmember">promoteChatMember</h3>
+<p>Use this method to promote or demote a user in a supergroup or a channel.</p>
+<p><code>telegram.promoteChatMember(chatId, userId, extra) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>userId</td>
+<td><code>number</code></td>
+<td>User id</td>
+</tr>
+<tr>
+<td>[extra]</td>
+<td><code>object</code></td>
+<td><a href="https://core.telegram.org/bots/api#promotechatmember">Extra parameters</a></td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#promotechatmember">Telegram api docs</a></sub></p>
+<h3 id="exportchatinvitelink">exportChatInviteLink</h3>
+<p>Use this method to export an invite link to a supergroup or a channel.</p>
+<p><code>telegram.exportChatInviteLink(chatId) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#exportchatinvitelink">Telegram api docs</a></sub></p>
+<h3 id="setchatphoto">setChatPhoto</h3>
+<p>Use this method to set a new profile photo for the chat.</p>
+<p><code>telegram.setChatPhoto(chatId, photo) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>photo</td>
+<td><code>File</code></td>
+<td>New chat photo</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#setchatphoto">Telegram api docs</a></sub></p>
+<h3 id="deletechatphoto">deleteChatPhoto</h3>
+<p>Use this method to delete a chat photo.</p>
+<p><code>telegram.deleteChatPhoto(chatId) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#deletechatphoto">Telegram api docs</a></sub></p>
+<h3 id="setchattitle">setChatTitle</h3>
+<p>Use this method to change the title of a chat.</p>
+<p><code>telegram.setChatTitle(chatId, title) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td>New chat title, 1-255 characters</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#setchattitle">Telegram api docs</a></sub></p>
+<h3 id="setchatdescription">setChatDescription</h3>
+<p>Use this method to change the description of a supergroup or a channel.</p>
+<p><code>telegram.setChatDescription(chatId, description) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>string</code></td>
+<td>New chat description, 0-255 characters</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#setchattitle">Telegram api docs</a></sub></p>
+<h3 id="pinchatmessage">pinChatMessage</h3>
+<p>Use this method to pin a message in a supergroup.</p>
+<p><code>telegram.pinChatMessage(chatId, messageId, extra) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>messageId</td>
+<td><code>number</code></td>
+<td>Message id</td>
+</tr>
+<tr>
+<td>[extra]</td>
+<td><code>object</code></td>
+<td><a href="https://core.telegram.org/bots/api#pinchatmessage">Extra parameters</a></td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#pinchatmessage">Telegram api docs</a></sub></p>
+<h3 id="unpinchatmessage">unpinChatMessage</h3>
+<p>Use this method to unpin a message in a supergroup chat.</p>
+<p><code>telegram.unpinChatMessage(chatId) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#unpinchatmessage">Telegram api docs</a></sub></p>
 <h3 id="leavechat">leaveChat</h3>
 <p>Use this method for your bot to leave a group, supergroup or channel.</p>
 <p><code>telegram.leaveChat(chatId) =&gt; Promise</code></p>
@@ -814,11 +1062,11 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#leavechat">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#leavechat">Telegram api docs</a></sub></p>
 <h3 id="deletewebhook">deleteWebhook</h3>
 <p>Removes webhook integration.</p>
 <p><code>telegram.deleteWebhook() =&gt; Promise</code></p>
-<p><sub><a href="https://core.telegram.org/bots/api#deletewebhook">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#deletewebhook">Telegram api docs</a></sub></p>
 <h3 id="sendaudio">sendAudio</h3>
 <p>Sends audio.</p>
 <p><code>telegram.sendAudio(chatId, audio, extra) =&gt; Promise</code></p>
@@ -1274,7 +1522,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#setwebhook">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#setwebhook">Telegram api docs</a></sub></p>
 <h3 id="unbanchatmember">unbanChatMember</h3>
 <p>Use this method to unban a previously kicked user in a supergroup.</p>
 <p><code>telegram.unbanChatMember(chatId, userId) =&gt; Promise</code></p>
@@ -1299,7 +1547,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
-<p><sub><a href="https://core.telegram.org/bots/api#unbanchatmember">See Telegram api docs</a></sub></p>
+<p><sub><a href="https://core.telegram.org/bots/api#unbanchatmember">Telegram api docs</a></sub></p>
 
         </div>
         <div class="footer-nav">
