@@ -34,6 +34,8 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-webhookreply" href="#webhookreply">webhookReply</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-addstickertoset" href="#addstickertoset">addStickerToSet</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-answercallbackquery" href="#answercallbackquery">answerCallbackQuery</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-answergamequery" href="#answergamequery">answerGameQuery</a>
@@ -44,7 +46,11 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-answerinlinequery" href="#answerinlinequery">answerInlineQuery</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-createnewstickerset" href="#createnewstickerset">createNewStickerSet</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-deletemessage" href="#deletemessage">deleteMessage</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-deletestickerfromset" href="#deletestickerfromset">deleteStickerFromSet</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-editmessagecaption" href="#editmessagecaption">editMessageCaption</a>
                     </li>
@@ -75,6 +81,8 @@
                     <li class="heading-item -depth-3"><a class="hlink link-getfilelink" href="#getfilelink">getFileLink</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-getme" href="#getme">getMe</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-getstickerset" href="#getstickerset">getStickerSet</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-getuserprofilephotos" href="#getuserprofilephotos">getUserProfilePhotos</a>
                     </li>
@@ -120,6 +128,8 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendsticker" href="#sendsticker">sendSticker</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-setstickerpositioninset" href="#setstickerpositioninset">setStickerPositionInSet</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendvenue" href="#sendvenue">sendVenue</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendinvoice" href="#sendinvoice">sendInvoice</a>
@@ -129,6 +139,8 @@
                     <li class="heading-item -depth-3"><a class="hlink link-sendvideonote" href="#sendvideonote">sendVideoNote</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendvoice" href="#sendvoice">sendVoice</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-uploadstickerfile" href="#uploadstickerfile">uploadStickerFile</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-setwebhook" href="#setwebhook">setWebhook</a>
                     </li>
@@ -186,6 +198,36 @@
 <h3 id="webhookreply">webhookReply</h3>
 <p>Use this property to control <code>reply via webhook</code> feature.</p>
 <p><code>telegram.webhookReply = [bool]</code></p>
+<h3 id="addstickertoset">addStickerToSet</h3>
+<p>Use this method to add a new sticker to a set created by the bot.</p>
+<p><code>telegram.addStickerToSet(ownerId, name, stickerData) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ownerId</td>
+<td><code>string</code></td>
+<td>User identifier of sticker set owner</td>
+</tr>
+<tr>
+<td>name</td>
+<td><code>string</code></td>
+<td>Sticker set name</td>
+</tr>
+<tr>
+<td>stickerData</td>
+<td><code>Object</code></td>
+<td>Sticker data({png_sticker: &apos;stiker file&apos;, emojis: &apos;&#x1F609;&apos;, mask__position: &apos;&apos; })</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#addstickertoset">Telegram api docs</a></sub></p>
 <h3 id="answercallbackquery">answerCallbackQuery</h3>
 <p>Use this method to send answers to callback queries.</p>
 <p><code>telegram.answerCallbackQuery(callbackQueryId, text, url, showAlert, cacheTime) =&gt; Promise</code></p>
@@ -342,8 +384,48 @@
 </tr>
 </tbody>
 </table>
+<h3 id="createnewstickerset">createNewStickerSet</h3>
+<p>Use this method to create new sticker set owned by a user.</p>
+<p><code>telegram.createNewStickerSet(ownerId, name, title, stickerData, isMasks) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ownerId</td>
+<td><code>string</code></td>
+<td>User identifier of sticker set owner</td>
+</tr>
+<tr>
+<td>name</td>
+<td><code>string</code></td>
+<td>Sticker set name</td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td>Sticker set title</td>
+</tr>
+<tr>
+<td>stickerData</td>
+<td><code>Object</code></td>
+<td>Sticker data({png_sticker: &apos;stiker file&apos;, emojis: &apos;&#x1F609;&apos;, mask__position: &apos;&apos; })</td>
+</tr>
+<tr>
+<td>[isMasks]</td>
+<td><code>bool</code></td>
+<td>Pass True, if a set of mask stickers should be created</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#createnewstickerset">Telegram api docs</a></sub></p>
 <h3 id="deletemessage">deleteMessage</h3>
-<p>Use this method to delete bot messages</p>
+<p>Use this method to delete bot messages.</p>
 <p><code>telegram.deleteMessage(chatId, messageId) =&gt; Promise</code></p>
 <table>
 <thead>
@@ -366,8 +448,27 @@
 </tr>
 </tbody>
 </table>
+<h3 id="deletestickerfromset">deleteStickerFromSet</h3>
+<p>Use this method to delete a sticker from a set created by the bot.</p>
+<p><code>telegram.deleteStickerFromSet(stickerId) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stickerId</td>
+<td></td>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="editmessagecaption">editMessageCaption</h3>
-<p>Use this method to edit captions of messages sent by the bot or via the bot</p>
+<p>Use this method to edit captions of messages sent by the bot or via the bot.</p>
 <p><code>telegram.editMessageCaption(chatId, messageId, inlineMessageId, caption, extra) =&gt; Promise</code></p>
 <table>
 <thead>
@@ -758,6 +859,26 @@ ns, current username of a user, group or channel, etc.).</p>
 <p>Returns basic information about the bot.</p>
 <p><code>telegram.getMe() =&gt; Promise</code></p>
 <p><sub><a href="https://core.telegram.org/bots/api#getme">Telegram api docs</a></sub></p>
+<h3 id="getstickerset">getStickerSet</h3>
+<p>Use this method to get a sticker set.</p>
+<p><code>telegram.getStickerSet(name) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>string</code></td>
+<td>Short name of the sticker set</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#getstickerset">Telegram api docs</a></sub></p>
 <h3 id="getuserprofilephotos">getUserProfilePhotos</h3>
 <p>Returns profiles photos for provided user.</p>
 <p><code>telegram.getUserProfilePhotos(userId, offset, limit) =&gt; Promise</code></p>
@@ -1333,6 +1454,30 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
+<h3 id="setstickerpositioninset">setStickerPositionInSet</h3>
+<p>Use this method to move a sticker in a set created by the bot to a specific position.</p>
+<p><code>telegram.setStickerPositionInSet(sticker, position) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sticker</td>
+<td><code>string</code></td>
+<td>File identifier of the sticker</td>
+</tr>
+<tr>
+<td>position</td>
+<td><code>number</code></td>
+<td>New sticker position in the set, zero-based</td>
+</tr>
+</tbody>
+</table>
 <h3 id="sendvenue">sendVenue</h3>
 <p>Sends venue information.</p>
 <p><code>telegram.sendVenue(chatId, latitude, longitude, title, address, extra) =&gt; Promise</code></p>
@@ -1485,6 +1630,30 @@ ns, current username of a user, group or channel, etc.).</p>
 <td>[extra]</td>
 <td><code>object</code></td>
 <td><a href="https://core.telegram.org/bots/api#sendvoice">Extra parameters</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="uploadstickerfile">uploadStickerFile</h3>
+<p>Use this method to upload a .png file with a sticker for later use in createNewStickerSet and addStickerToSet methods.</p>
+<p><code>telegram.uploadStickerFile(ownerId, stickerFile) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ownerId</td>
+<td><code>string</code></td>
+<td>User identifier of sticker file owner</td>
+</tr>
+<tr>
+<td>png_sticker</td>
+<td><code>File</code></td>
+<td>Png image with the sticker</td>
 </tr>
 </tbody>
 </table>

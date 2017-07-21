@@ -268,6 +268,11 @@
                 "id": "webhookreply"
               },
               {
+                "title": "addStickerToSet",
+                "depth": 3,
+                "id": "addstickertoset"
+              },
+              {
                 "title": "answerCallbackQuery",
                 "depth": 3,
                 "id": "answercallbackquery"
@@ -293,9 +298,19 @@
                 "id": "answerinlinequery"
               },
               {
+                "title": "createNewStickerSet",
+                "depth": 3,
+                "id": "createnewstickerset"
+              },
+              {
                 "title": "deleteMessage",
                 "depth": 3,
                 "id": "deletemessage"
+              },
+              {
+                "title": "deleteStickerFromSet",
+                "depth": 3,
+                "id": "deletestickerfromset"
               },
               {
                 "title": "editMessageCaption",
@@ -371,6 +386,11 @@
                 "title": "getMe",
                 "depth": 3,
                 "id": "getme"
+              },
+              {
+                "title": "getStickerSet",
+                "depth": 3,
+                "id": "getstickerset"
               },
               {
                 "title": "getUserProfilePhotos",
@@ -483,6 +503,11 @@
                 "id": "sendsticker"
               },
               {
+                "title": "setStickerPositionInSet",
+                "depth": 3,
+                "id": "setstickerpositioninset"
+              },
+              {
                 "title": "sendVenue",
                 "depth": 3,
                 "id": "sendvenue"
@@ -506,6 +531,11 @@
                 "title": "sendVoice",
                 "depth": 3,
                 "id": "sendvoice"
+              },
+              {
+                "title": "uploadStickerFile",
+                "depth": 3,
+                "id": "uploadstickerfile"
               },
               {
                 "title": "setWebhook",
@@ -804,6 +834,11 @@
           "id": "webhookreply"
         },
         {
+          "title": "addStickerToSet",
+          "depth": 3,
+          "id": "addstickertoset"
+        },
+        {
           "title": "answerCallbackQuery",
           "depth": 3,
           "id": "answercallbackquery"
@@ -829,9 +864,19 @@
           "id": "answerinlinequery"
         },
         {
+          "title": "createNewStickerSet",
+          "depth": 3,
+          "id": "createnewstickerset"
+        },
+        {
           "title": "deleteMessage",
           "depth": 3,
           "id": "deletemessage"
+        },
+        {
+          "title": "deleteStickerFromSet",
+          "depth": 3,
+          "id": "deletestickerfromset"
         },
         {
           "title": "editMessageCaption",
@@ -907,6 +952,11 @@
           "title": "getMe",
           "depth": 3,
           "id": "getme"
+        },
+        {
+          "title": "getStickerSet",
+          "depth": 3,
+          "id": "getstickerset"
         },
         {
           "title": "getUserProfilePhotos",
@@ -1019,6 +1069,11 @@
           "id": "sendsticker"
         },
         {
+          "title": "setStickerPositionInSet",
+          "depth": 3,
+          "id": "setstickerpositioninset"
+        },
+        {
           "title": "sendVenue",
           "depth": 3,
           "id": "sendvenue"
@@ -1042,6 +1097,11 @@
           "title": "sendVoice",
           "depth": 3,
           "id": "sendvoice"
+        },
+        {
+          "title": "uploadStickerFile",
+          "depth": 3,
+          "id": "uploadstickerfile"
         },
         {
           "title": "setWebhook",
