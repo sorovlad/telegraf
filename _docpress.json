@@ -26,6 +26,23 @@
             "title": "Examples",
             "depth": 2,
             "id": "examples"
+          },
+          {
+            "title": "Quick start",
+            "depth": 2,
+            "id": "quick-start",
+            "headings": [
+              {
+                "title": "Community bots",
+                "depth": 3,
+                "id": "community-bots"
+              },
+              {
+                "title": "Community quickstarts",
+                "depth": 3,
+                "id": "community-quickstarts"
+              }
+            ]
           }
         ],
         "sections": [
@@ -597,6 +614,23 @@
           "title": "Examples",
           "depth": 2,
           "id": "examples"
+        },
+        {
+          "title": "Quick start",
+          "depth": 2,
+          "id": "quick-start",
+          "headings": [
+            {
+              "title": "Community bots",
+              "depth": 3,
+              "id": "community-bots"
+            },
+            {
+              "title": "Community quickstarts",
+              "depth": 3,
+              "id": "community-quickstarts"
+            }
+          ]
         }
       ]
     },
