@@ -252,6 +252,11 @@
                 "id": "telegraf.optional"
               },
               {
+                "title": "Telegraf.drop",
+                "depth": 3,
+                "id": "telegraf.drop"
+              },
+              {
                 "title": "Telegraf.filter",
                 "depth": 3,
                 "id": "telegraf.filter"
@@ -833,6 +838,11 @@
           "title": "Telegraf.optional",
           "depth": 3,
           "id": "telegraf.optional"
+        },
+        {
+          "title": "Telegraf.drop",
+          "depth": 3,
+          "id": "telegraf.drop"
         },
         {
           "title": "Telegraf.filter",
