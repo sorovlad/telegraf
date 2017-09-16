@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=d358ee59">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
     <link rel="stylesheet" href="docs.css?t=4f015f21">
     <script src="assets/script.js?t=42463e55"></script>
     <title>Telegram - Telegraf</title>
@@ -778,7 +778,7 @@ ns, current username of a user, group or channel, etc.).</p>
 <p><sub><a href="https://core.telegram.org/bots/api#getgamehighscores">Telegram api docs</a></sub></p>
 <h3 id="getchatmember">getChatMember</h3>
 <p>Use this method to get information about a member of a chat.</p>
-<p><code>telegram.getChatMember(chatId) =&gt; Promise</code></p>
+<p><code>telegram.getChatMember(chatId, userId) =&gt; Promise</code></p>
 <table>
 <thead>
 <tr>
@@ -792,6 +792,11 @@ ns, current username of a user, group or channel, etc.).</p>
 <td>chatId</td>
 <td><code>number</code>|<code>string</code></td>
 <td>Chat id</td>
+</tr>
+<tr>
+<td>userId</td>
+<td><code>number</code></td>
+<td>User identifier</td>
 </tr>
 </tbody>
 </table>

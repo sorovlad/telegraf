@@ -91,6 +91,11 @@
                 "title": "Webhooks",
                 "depth": 2,
                 "id": "webhooks"
+              },
+              {
+                "title": "Working with files",
+                "depth": 2,
+                "id": "working-with-files"
               }
             ]
           },
@@ -684,6 +689,11 @@
           "title": "Webhooks",
           "depth": 2,
           "id": "webhooks"
+        },
+        {
+          "title": "Working with files",
+          "depth": 2,
+          "id": "working-with-files"
         }
       ]
     },
