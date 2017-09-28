@@ -187,6 +187,21 @@
                 "id": "command"
               },
               {
+                "title": "entity",
+                "depth": 3,
+                "id": "entity"
+              },
+              {
+                "title": "mention",
+                "depth": 3,
+                "id": "mention"
+              },
+              {
+                "title": "hashtag",
+                "depth": 3,
+                "id": "hashtag"
+              },
+              {
                 "title": "action",
                 "depth": 3,
                 "id": "action"
@@ -778,6 +793,21 @@
           "title": "command",
           "depth": 3,
           "id": "command"
+        },
+        {
+          "title": "entity",
+          "depth": 3,
+          "id": "entity"
+        },
+        {
+          "title": "mention",
+          "depth": 3,
+          "id": "mention"
+        },
+        {
+          "title": "hashtag",
+          "depth": 3,
+          "id": "hashtag"
         },
         {
           "title": "action",

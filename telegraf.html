@@ -42,6 +42,12 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-command" href="#command">command</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-entity" href="#entity">entity</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-mention" href="#mention">mention</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-hashtag" href="#hashtag">hashtag</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-action" href="#action">action</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-gamequery" href="#gamequery">gameQuery</a>
@@ -140,7 +146,7 @@
 <p><code>telegraf.webhookReply = [bool]</code></p>
 <h3 id="use">use</h3>
 <p>Registers a middleware.</p>
-<p><code>telegraf.use(middleware)</code></p>
+<p><code>telegraf.use(...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -159,7 +165,7 @@
 </table>
 <h3 id="on">on</h3>
 <p>Registers middleware for provided update type.</p>
-<p><code>telegraf.on(updateTypes, middleware, [middleware...])</code></p>
+<p><code>telegraf.on(updateTypes, ...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -183,7 +189,7 @@
 </table>
 <h3 id="hears">hears</h3>
 <p>Registers middleware for handling <code>text</code> messages.</p>
-<p><code>telegraf.hears(triggers, middleware, [middleware...])</code></p>
+<p><code>telegraf.hears(triggers, ...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -207,7 +213,7 @@
 </table>
 <h3 id="command">command</h3>
 <p>Command handling.</p>
-<p><code>telegraf.command(commands, middleware, [middleware...])</code></p>
+<p><code>telegraf.command(commands, ...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -218,9 +224,81 @@
 </thead>
 <tbody>
 <tr>
-<td>triggers</td>
-<td><code>string[]</code></td>
+<td>commands</td>
+<td><code>string</code>/<code>string[]</code></td>
 <td>Commands</td>
+</tr>
+<tr>
+<td>middleware</td>
+<td><code>function</code></td>
+<td>Middleware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entity">entity</h3>
+<p>Entity handling.</p>
+<p><code>telegraf.entity(entity, ands, ...middleware)</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>entity</td>
+<td><code>string</code>/<code>string[]</code>/<code>function</code></td>
+<td>Entity name</td>
+</tr>
+<tr>
+<td>middleware</td>
+<td><code>function</code></td>
+<td>Middleware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mention">mention</h3>
+<p>Mention handling.</p>
+<p><code>telegraf.mention(username, ands, ...middleware)</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td><code>string</code>/<code>string[]</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td>middleware</td>
+<td><code>function</code></td>
+<td>Middleware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hashtag">hashtag</h3>
+<p>Hashtag handling.</p>
+<p><code>telegraf.hashtag(entity, ands, ...middleware)</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hashtag</td>
+<td><code>string</code>/<code>string[]</code></td>
+<td>Hashtag</td>
 </tr>
 <tr>
 <td>middleware</td>
@@ -231,7 +309,7 @@
 </table>
 <h3 id="action">action</h3>
 <p>Registers middleware for handling <code>callback_data</code> actions with regular expressions.</p>
-<p><code>telegraf.action(triggers, middleware, [middleware...])</code></p>
+<p><code>telegraf.action(triggers, ...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -255,7 +333,7 @@
 </table>
 <h3 id="gamequery">gameQuery</h3>
 <p>Registers middleware for handling <code>callback_data</code> actions with game query.</p>
-<p><code>telegraf.gameQuery(middleware, [middleware...])</code></p>
+<p><code>telegraf.gameQuery(...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -408,7 +486,7 @@ In case you use centralized webhook server, queue, etc.</p>
 </table>
 <h3 id="telegraf.mount">Telegraf.mount</h3>
 <p>Generates middleware for handling provided update types.</p>
-<p><code>Telegraf.mount(updateTypes, middleware) =&gt; function</code></p>
+<p><code>Telegraf.mount(updateTypes, ...middleware) =&gt; function</code></p>
 <table>
 <thead>
 <tr>
@@ -432,7 +510,7 @@ In case you use centralized webhook server, queue, etc.</p>
 </table>
 <h3 id="telegraf.hears">Telegraf.hears</h3>
 <p>Generates middleware for handling <code>text</code> messages with regular expressions.</p>
-<p><code>Telegraf.hears(triggers, middleware) =&gt; function</code></p>
+<p><code>Telegraf.hears(triggers, ...middleware) =&gt; function</code></p>
 <table>
 <thead>
 <tr>
@@ -456,7 +534,7 @@ In case you use centralized webhook server, queue, etc.</p>
 </table>
 <h3 id="telegraf.action">Telegraf.action</h3>
 <p>Generates middleware for handling <code>callbackQuery</code> data with regular expressions.</p>
-<p><code>Telegraf.action(triggers, middleware) =&gt; function</code></p>
+<p><code>Telegraf.action(triggers, ...middleware) =&gt; function</code></p>
 <table>
 <thead>
 <tr>
@@ -486,7 +564,7 @@ In case you use centralized webhook server, queue, etc.</p>
 <p><code>Telegraf.safePassThru() =&gt; function</code></p>
 <h3 id="telegraf.optional">Telegraf.optional</h3>
 <p>Generates optional middleware.</p>
-<p><code>Telegraf.optional(test, middleware) =&gt; function</code></p>
+<p><code>Telegraf.optional(test, ...middleware) =&gt; function</code></p>
 <table>
 <thead>
 <tr>
