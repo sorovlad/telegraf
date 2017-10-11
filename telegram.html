@@ -48,11 +48,15 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-createnewstickerset" href="#createnewstickerset">createNewStickerSet</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-deletechatstickerset" href="#deletechatstickerset">deleteChatStickerSet</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-deletemessage" href="#deletemessage">deleteMessage</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-deletestickerfromset" href="#deletestickerfromset">deleteStickerFromSet</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-editmessagecaption" href="#editmessagecaption">editMessageCaption</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-editmessagelivelocation" href="#editmessagelivelocation">editMessageLiveLocation</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-editmessagereplymarkup" href="#editmessagereplymarkup">editMessageReplyMarkup</a>
                     </li>
@@ -102,6 +106,8 @@
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-setchatdescription" href="#setchatdescription">setChatDescription</a>
                     </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-setchatstickerset" href="#setchatstickerset">setChatStickerSet</a>
+                    </li>
                     <li class="heading-item -depth-3"><a class="hlink link-pinchatmessage" href="#pinchatmessage">pinChatMessage</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-unpinchatmessage" href="#unpinchatmessage">unpinChatMessage</a>
@@ -139,6 +145,8 @@
                     <li class="heading-item -depth-3"><a class="hlink link-sendvideonote" href="#sendvideonote">sendVideoNote</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-sendvoice" href="#sendvoice">sendVoice</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a class="hlink link-stopmessagelivelocation" href="#stopmessagelivelocation">stopMessageLiveLocation</a>
                     </li>
                     <li class="heading-item -depth-3"><a class="hlink link-uploadstickerfile" href="#uploadstickerfile">uploadStickerFile</a>
                     </li>
@@ -424,6 +432,26 @@
 </tbody>
 </table>
 <p><sub><a href="https://core.telegram.org/bots/api#createnewstickerset">Telegram api docs</a></sub></p>
+<h3 id="deletechatstickerset">deleteChatStickerSet</h3>
+<p>Use this method to delete a group sticker set from a supergroup.</p>
+<p><code>telegram.deleteChatStickerSet(chatId) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#deletechatstickerset">Telegram api docs</a></sub></p>
 <h3 id="deletemessage">deleteMessage</h3>
 <p>Use this method to delete bot messages.</p>
 <p><code>telegram.deleteMessage(chatId, messageId) =&gt; Promise</code></p>
@@ -448,6 +476,7 @@
 </tr>
 </tbody>
 </table>
+<p><sub><a href="https://core.telegram.org/bots/api#deletemessage">Telegram api docs</a></sub></p>
 <h3 id="deletestickerfromset">deleteStickerFromSet</h3>
 <p>Use this method to delete a sticker from a set created by the bot.</p>
 <p><code>telegram.deleteStickerFromSet(stickerId) =&gt; Promise</code></p>
@@ -467,6 +496,7 @@
 </tr>
 </tbody>
 </table>
+<p><sub><a href="https://core.telegram.org/bots/api#deletestickerfromset">Telegram api docs</a></sub></p>
 <h3 id="editmessagecaption">editMessageCaption</h3>
 <p>Use this method to edit captions of messages sent by the bot or via the bot.</p>
 <p><code>telegram.editMessageCaption(chatId, messageId, inlineMessageId, caption, extra) =&gt; Promise</code></p>
@@ -500,12 +530,57 @@
 <td>Caption</td>
 </tr>
 <tr>
-<td>[extra]</td>
+<td>extra</td>
 <td><code>object</code></td>
 <td><a href="https://core.telegram.org/bots/api#editmessagecaption">Extra parameters</a></td>
 </tr>
 </tbody>
 </table>
+<h3 id="editmessagelivelocation">editMessageLiveLocation</h3>
+<p>Use this method to edit live location messages sent by the bot or via the bot.</p>
+<p><code>telegram.editMessageLiveLocation(latitude, longitude, chatId, messageId, inlineMessageId, markup) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latitude</td>
+<td><code>string</code></td>
+<td>Latitude of new location</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td><code>string</code></td>
+<td>Longitude of new location</td>
+</tr>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>messageId</td>
+<td><code>string</code></td>
+<td>Message id</td>
+</tr>
+<tr>
+<td>inlineMessageId</td>
+<td><code>string</code></td>
+<td>Inline message id</td>
+</tr>
+<tr>
+<td>markup</td>
+<td><code>object</code></td>
+<td>Keyboard markup</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#editmessagelivelocation">Telegram api docs</a></sub></p>
 <h3 id="editmessagereplymarkup">editMessageReplyMarkup</h3>
 <p>Use this method to edit only the reply markup of messages sent by the bot or via the bot.</p>
 <p><code>telegram.editMessageReplyMarkup(chatId, messageId, inlineMessageId, markup, extra) =&gt; Promise</code></p>
@@ -1119,6 +1194,31 @@ ns, current username of a user, group or channel, etc.).</p>
 </tbody>
 </table>
 <p><sub><a href="https://core.telegram.org/bots/api#setchattitle">Telegram api docs</a></sub></p>
+<h3 id="setchatstickerset">setChatStickerSet</h3>
+<p>Use this method to set a new group sticker set for a supergroup.</p>
+<p><code>telegram.setChatStickerSet(chatId, setName) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>setName</td>
+<td><code>string</code></td>
+<td>Name of the sticker set</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#setchatstickerset">Telegram api docs</a></sub></p>
 <h3 id="pinchatmessage">pinChatMessage</h3>
 <p>Use this method to pin a message in a supergroup.</p>
 <p><code>telegram.pinChatMessage(chatId, messageId, extra) =&gt; Promise</code></p>
@@ -1638,6 +1738,41 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
+<h3 id="stopmessagelivelocation">stopMessageLiveLocation</h3>
+<p>Use this method to stop updating a live location message sent by the bot or via the bot (for inline bots) before live_period expires.</p>
+<p><code>telegram.stopMessageLiveLocation(chatId, messageId, inlineMessageId, markup) =&gt; Promise</code></p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chatId</td>
+<td><code>number</code>|<code>string</code></td>
+<td>Chat id</td>
+</tr>
+<tr>
+<td>messageId</td>
+<td><code>string</code></td>
+<td>Message id</td>
+</tr>
+<tr>
+<td>inlineMessageId</td>
+<td><code>string</code></td>
+<td>Inline message id</td>
+</tr>
+<tr>
+<td>markup</td>
+<td><code>object</code></td>
+<td>Keyboard markup</td>
+</tr>
+</tbody>
+</table>
+<p><sub><a href="https://core.telegram.org/bots/api#stopmessagelivelocation">Telegram api docs</a></sub></p>
 <h3 id="uploadstickerfile">uploadStickerFile</h3>
 <p>Use this method to upload a .png file with a sticker for later use in createNewStickerSet and addStickerToSet methods.</p>
 <p><code>telegram.uploadStickerFile(ownerId, stickerFile) =&gt; Promise</code></p>
@@ -1662,6 +1797,7 @@ ns, current username of a user, group or channel, etc.).</p>
 </tr>
 </tbody>
 </table>
+<p><sub><a href="https://core.telegram.org/bots/api#uploadstickerfile">Telegram api docs</a></sub></p>
 <h3 id="setwebhook">setWebhook</h3>
 <p>Specifies an url to receive incoming updates via an outgoing webhook.</p>
 <p><code>telegram.setWebhook(url, [cert], [maxConnections], [allowedUpdates]) =&gt; Promise</code></p>

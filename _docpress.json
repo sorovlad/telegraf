@@ -345,6 +345,11 @@
                 "id": "createnewstickerset"
               },
               {
+                "title": "deleteChatStickerSet",
+                "depth": 3,
+                "id": "deletechatstickerset"
+              },
+              {
                 "title": "deleteMessage",
                 "depth": 3,
                 "id": "deletemessage"
@@ -358,6 +363,11 @@
                 "title": "editMessageCaption",
                 "depth": 3,
                 "id": "editmessagecaption"
+              },
+              {
+                "title": "editMessageLiveLocation",
+                "depth": 3,
+                "id": "editmessagelivelocation"
               },
               {
                 "title": "editMessageReplyMarkup",
@@ -480,6 +490,11 @@
                 "id": "setchatdescription"
               },
               {
+                "title": "setChatStickerSet",
+                "depth": 3,
+                "id": "setchatstickerset"
+              },
+              {
                 "title": "pinChatMessage",
                 "depth": 3,
                 "id": "pinchatmessage"
@@ -573,6 +588,11 @@
                 "title": "sendVoice",
                 "depth": 3,
                 "id": "sendvoice"
+              },
+              {
+                "title": "stopMessageLiveLocation",
+                "depth": 3,
+                "id": "stopmessagelivelocation"
               },
               {
                 "title": "uploadStickerFile",
@@ -953,6 +973,11 @@
           "id": "createnewstickerset"
         },
         {
+          "title": "deleteChatStickerSet",
+          "depth": 3,
+          "id": "deletechatstickerset"
+        },
+        {
           "title": "deleteMessage",
           "depth": 3,
           "id": "deletemessage"
@@ -966,6 +991,11 @@
           "title": "editMessageCaption",
           "depth": 3,
           "id": "editmessagecaption"
+        },
+        {
+          "title": "editMessageLiveLocation",
+          "depth": 3,
+          "id": "editmessagelivelocation"
         },
         {
           "title": "editMessageReplyMarkup",
@@ -1088,6 +1118,11 @@
           "id": "setchatdescription"
         },
         {
+          "title": "setChatStickerSet",
+          "depth": 3,
+          "id": "setchatstickerset"
+        },
+        {
           "title": "pinChatMessage",
           "depth": 3,
           "id": "pinchatmessage"
@@ -1181,6 +1216,11 @@
           "title": "sendVoice",
           "depth": 3,
           "id": "sendvoice"
+        },
+        {
+          "title": "stopMessageLiveLocation",
+          "depth": 3,
+          "id": "stopmessagelivelocation"
         },
         {
           "title": "uploadStickerFile",

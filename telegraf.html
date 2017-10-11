@@ -285,7 +285,7 @@
 </table>
 <h3 id="hashtag">hashtag</h3>
 <p>Hashtag handling.</p>
-<p><code>telegraf.hashtag(entity, ands, ...middleware)</code></p>
+<p><code>telegraf.hashtag(hashtag, ands, ...middleware)</code></p>
 <table>
 <thead>
 <tr>
@@ -419,7 +419,7 @@
 </table>
 <h3 id="stop">stop</h3>
 <p>Stop Webhook and polling</p>
-<p><code>telegraf.stop()</code></p>
+<p><code>telegraf.stop([callback])</code></p>
 <h3 id="webhookcallback">webhookCallback</h3>
 <p>Return a callback function suitable for the http[s].createServer() method to handle a request.
 You may also use this callback function to mount your telegraf app in a Koa/Connect/Express app.</p>
