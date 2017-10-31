@@ -187,6 +187,11 @@
                 "id": "command"
               },
               {
+                "title": "start",
+                "depth": 3,
+                "id": "start"
+              },
+              {
                 "title": "entity",
                 "depth": 3,
                 "id": "entity"
@@ -813,6 +818,11 @@
           "title": "command",
           "depth": 3,
           "id": "command"
+        },
+        {
+          "title": "start",
+          "depth": 3,
+          "id": "start"
         },
         {
           "title": "entity",

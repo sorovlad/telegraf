@@ -91,12 +91,15 @@ by <a href="https://core.telegram.org/bots#6-botfather">chatting with BotFather<
 <pre><code class="lang-js"><span class="pl-k">const</span> Telegraf = <span class="pl-c1">require</span>(<span class="pl-s">&apos;telegraf&apos;</span>)
 
 <span class="pl-k">const</span> app = <span class="pl-k">new</span> Telegraf(process.env.BOT_TOKEN)
-app.command(<span class="pl-s">&apos;start&apos;</span>, ({ <span class="pl-k">from</span>, reply }) =&gt; {
-  <span class="pl-c1">console</span>.log(<span class="pl-s">&apos;start&apos;</span>, <span class="pl-k">from</span>)
-  <span class="pl-k">return</span> reply(<span class="pl-s">&apos;Welcome!&apos;</span>)
+app.start(<span class="hljs-function">(<span class="hljs-params">ctx</span>) =&gt;</span> {
+  <span class="pl-c1">console</span>.log(<span class="pl-s">&apos;started:&apos;</span>, ctx.from.id)
+  <span class="pl-k">return</span> ctx.reply(<span class="pl-s">&apos;Welcome!&apos;</span>)
 })
+app.command(<span class="pl-s">&apos;help&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Try send a sticker!&apos;</span>))
 app.hears(<span class="pl-s">&apos;hi&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Hey there!&apos;</span>))
+app.hears(<span class="hljs-regexp">/buy/i</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;Buy-buy!&apos;</span>))
 app.on(<span class="pl-s">&apos;sticker&apos;</span>, (ctx) =&gt; ctx.reply(<span class="pl-s">&apos;&#x1F44D;&apos;</span>))
+
 app.startPolling()
 </code></pre>
 <pre><code class="lang-js"><span class="pl-k">const</span> Telegraf = <span class="pl-c1">require</span>(<span class="pl-s">&apos;telegraf&apos;</span>)
